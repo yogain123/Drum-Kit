@@ -10,6 +10,7 @@ function handleClick(event) {
   console.log(this);
   console.log(event.target);
   makeSound(event.target.innerText);
+  buttonAnimation(event.target.innerText);
 }
 
 // Added event to Each buttom using for loop
@@ -24,6 +25,7 @@ document.addEventListener("keypress", handleKeyboardEvent);
 function handleKeyboardEvent(event) {
   console.log(event.key);
   makeSound(event.key);
+  buttonAnimation(event.key);
 }
 
 function makeSound(key) {
@@ -67,4 +69,12 @@ function makeSound(key) {
       break;
     }
   }
+}
+
+function buttonAnimation(key) {
+  let activeButton = document.querySelector("." + key);
+  activeButton.classList.add("pressed");
+  setTimeout(() => {
+    activeButton.classList.remove("pressed");
+  }, 200);
 }
