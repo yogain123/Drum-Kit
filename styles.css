@@ -43,8 +43,20 @@ footer {
   background: url("images/kick.png");
 }
 
+.z {
+  background: url("images/tom4.png");
+}
+
+.x {
+  background: url("images/tom3.png");
+}
+
+.c {
+  background: url("images/tom4.png");
+}
+
 .set {
-  margin: 10% auto;
+  margin: auto;
 }
 
 .game-over {
