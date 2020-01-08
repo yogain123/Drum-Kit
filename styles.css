@@ -3,6 +3,10 @@ body {
   background-color: #283149;
 }
 
+.modify-body {
+  background-color: black;
+}
+
 h1 {
   font-size: 5rem;
   color: #dbedf3;
@@ -67,6 +71,7 @@ footer {
 .pressed {
   box-shadow: 0 3px 4px 0 #dbedf3;
   opacity: 0.5;
+  background-color: red;
   -moz-transform: scale(0.9);
   -webkit-transform: scale(0.9);
   -o-transform: scale(0.9);
