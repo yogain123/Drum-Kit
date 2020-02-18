@@ -43,7 +43,9 @@ const keyAudioMap = {
 
 function makeSound(key) {
   const audioPath = keyAudioMap[key];
-  if (audioPath) new Audio(audioPath).play();
+  if (audioPath) {
+    new Audio(audioPath).play();
+  }
 }
 
 function buttonAnimation(key) {
