@@ -28,62 +28,22 @@ function handleKeyboardEvent(event) {
   buttonAnimation(event.key);
 }
 
+const keyAudioMap = {
+  w: "sounds/tom-1.mp3",
+  a: "sounds/tom-2.mp3",
+  s: "sounds/snare.mp3",
+  d: "sounds/tom-4.mp3",
+  j: "sounds/crash.mp3",
+  k: "sounds/tom-3.mp3",
+  l: "sounds/kick-bass.mp3",
+  z: "sounds/tom-4.mp3",
+  x: "sounds/tom-3.mp3",
+  c: "sounds/tom-4.mp3"
+}
+
 function makeSound(key) {
-  switch (key) {
-    case "w": {
-      let tom1 = new Audio("sounds/tom-1.mp3");
-      tom1.play();
-      break;
-    }
-    case "a": {
-      let tom2 = new Audio("sounds/tom-2.mp3");
-      tom2.play();
-      break;
-    }
-    case "s": {
-      let snare = new Audio("sounds/snare.mp3");
-      snare.play();
-      break;
-    }
-    case "d": {
-      let tom4 = new Audio("sounds/tom-4.mp3");
-      tom4.play();
-      break;
-    }
-    case "j": {
-      let crash = new Audio("sounds/crash.mp3");
-      crash.play();
-      break;
-    }
-    case "k": {
-      let tom3 = new Audio("sounds/tom-3.mp3");
-      tom3.play();
-      break;
-    }
-    case "l": {
-      let kick = new Audio("sounds/kick-bass.mp3");
-      kick.play();
-      break;
-    }
-    case "z": {
-      let kick = new Audio("sounds/tom-4.mp3");
-      kick.play();
-      break;
-    }
-    case "x": {
-      let kick = new Audio("sounds/tom-3.mp3");
-      kick.play();
-      break;
-    }
-    case "c": {
-      let kick = new Audio("sounds/tom-4.mp3");
-      kick.play();
-      break;
-    }
-    default: {
-      break;
-    }
-  }
+  const audioPath = keyAudioMap[key];
+  if (audioPath) new Audio(audioPath).play();
 }
 
 function buttonAnimation(key) {
