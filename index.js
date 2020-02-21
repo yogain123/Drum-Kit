@@ -10,6 +10,14 @@ function handleClick(event) {
   console.log(this);
   console.log(event.target);
   makeSound(event.target.innerText);
+  if (window.Worker) {
+    console.log("inside");
+    let worker = new Worker("backgroud.js");
+    worker.postMessage(100000000);
+    worker.onmessage = function(e) {
+      console.log(e.data);
+    };
+  }
   buttonAnimation(event.target.innerText);
 }
 
